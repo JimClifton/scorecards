@@ -1,0 +1,51 @@
+extends layout
+
+block content
+	each scoreCard, index in scoreCards
+		div(class="panel panel-default")
+			div(class="panel-body")
+				p(class="pull-right")= scoreCard.date
+				h1= scoreCard.course
+				div(class="col-xs-6 col-sm-6 col-md-6")
+					h2 Course Par
+					ul
+						li Hole 1 : #{scoreCard.hole1.par}
+						li Hole 2 : #{scoreCard.hole2.par}
+						li Hole 3 : #{scoreCard.hole3.par}
+						li Hole 4 : #{scoreCard.hole4.par}
+						li Hole 5 : #{scoreCard.hole5.par}
+						li Hole 6 : #{scoreCard.hole6.par}
+						li Hole 7 : #{scoreCard.hole7.par}
+						li Hole 8 : #{scoreCard.hole8.par}
+						li Hole 9 : #{scoreCard.hole9.par}
+						li Hole 10 : #{scoreCard.hole10.par}
+						li Hole 11 : #{scoreCard.hole11.par}
+						li Hole 12 : #{scoreCard.hole12.par}
+						li Hole 13 : #{scoreCard.hole13.par}
+						li Hole 14 : #{scoreCard.hole14.par}
+						li Hole 15 : #{scoreCard.hole15.par}
+						li Hole 16 : #{scoreCard.hole16.par}
+						li Hole 17 : #{scoreCard.hole17.par}
+						li Hole 18 : #{scoreCard.hole18.par}
+				div(class="col-xs-6 col-sm-6 col-md-6")
+					h2 My Score
+					ul
+						li Hole 1 : #{scoreCard.hole1.myscore}
+						li Hole 2 : #{scoreCard.hole2.myscore}
+						li Hole 3 : #{scoreCard.hole3.myscore}
+						li Hole 4 : #{scoreCard.hole4.myscore}
+						li Hole 5 : #{scoreCard.hole5.myscore}
+						li Hole 6 : #{scoreCard.hole6.myscore}
+						li Hole 7 : #{scoreCard.hole7.myscore}
+						li Hole 8 : #{scoreCard.hole8.myscore}
+						li Hole 9 : #{scoreCard.hole9.myscore}
+						li Hole 10 : #{scoreCard.hole10.myscore}
+						li Hole 11 : #{scoreCard.hole11.myscore}
+						li Hole 12 : #{scoreCard.hole12.myscore}
+						li Hole 13 : #{scoreCard.hole13.myscore}
+						li Hole 14 : #{scoreCard.hole14.myscore}
+						li Hole 15 : #{scoreCard.hole15.myscore}
+						li Hole 16 : #{scoreCard.hole16.myscore}
+						li Hole 17 : #{scoreCard.hole17.myscore}
+						li Hole 18 : #{scoreCard.hole18.myscore}
+				

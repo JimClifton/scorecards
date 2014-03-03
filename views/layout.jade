@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		div(class="navbar navbar-default")
+			a(class="navbar-brand" href="/") Golf Scores
+
+			ul(class="nav navbar-nav navbar-right")
+				if (typeof(user) == 'undefined')
+					li
+						a(href="/register") Register
+					li
+						a(href="/login") Log In
+				else
+					li
+						a(href="/scorecards") My Scorecards
+					li
+						a(href="/logout") Log Out
+		block content

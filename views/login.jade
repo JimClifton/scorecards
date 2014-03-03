@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1= title
+	-if(message.length > 0) {
+		div(class="alert alert-danger")
+			span= message
+	-}
+	form(method='post')
+		div(class="form-group")
+			input(name='username', class='form-control', placeholder='username')
+		div(class="form-group")
+			input(name='password', class='form-control', type='password', placeholder='password')
+		div(class="form-group")
+			input(type='submit', class='btn btn-primary', value='Log in')

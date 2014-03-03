@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1= title
+	each scoreCard, index in scoreCards
+		div(class="panel panel-default")
+			div(class="panel-body")
+				a(href="/scorecards/#{scoreCard._id}")=scoreCard.course
+				span(class="pull-right")=scoreCard.date
