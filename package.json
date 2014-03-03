@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "Scorecard",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,5 +11,17 @@
     "mongoose": "~3.8.8",
     "passport": "~0.2.0",
     "passport-local": "~0.1.6"
+  },
+  "description": "An app for storing golf scorecards",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JimClifton/scorecards.git"
+  },
+  "author": "James Clifton",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/JimClifton/scorecards/issues"
   }
 }

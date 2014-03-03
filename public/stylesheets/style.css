@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.list-group-item {height:40px;}
+.list-group-item span {vertical-align: middle;}
+
+.txt-score {width:40px; border:1px solid #ddd;}

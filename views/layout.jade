@@ -6,17 +6,25 @@ html
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
 		div(class="navbar navbar-default")
+			button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse")
+				span(class="sr-only") Toggle navigation
+				span(class="icon-bar")
+				span(class="icon-bar")
+				span(class="icon-bar")
 			a(class="navbar-brand" href="/") Golf Scores
 
-			ul(class="nav navbar-nav navbar-right")
-				if (typeof(user) == 'undefined')
-					li
-						a(href="/register") Register
-					li
-						a(href="/login") Log In
-				else
-					li
-						a(href="/scorecards") My Scorecards
-					li
-						a(href="/logout") Log Out
+			div(class="collapse navbar-collapse" id="navbar-collapse")
+				ul(class="nav navbar-nav navbar-right")
+					if (typeof(user) == 'undefined')
+						li
+							a(href="/register") Register
+						li
+							a(href="/login") Log In
+					else
+						li
+							a(href="/scorecards") My Scorecards
+						li
+							a(href="/logout") Log Out
 		block content
+		script(src="/javascripts/jquery.js")
+		script(src="/javascripts/scripts.js")

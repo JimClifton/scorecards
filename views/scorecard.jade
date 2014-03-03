@@ -6,46 +6,106 @@ block content
 			div(class="panel-body")
 				p(class="pull-right")= scoreCard.date
 				h1= scoreCard.course
-				div(class="col-xs-6 col-sm-6 col-md-6")
-					h2 Course Par
-					ul
-						li Hole 1 : #{scoreCard.hole1.par}
-						li Hole 2 : #{scoreCard.hole2.par}
-						li Hole 3 : #{scoreCard.hole3.par}
-						li Hole 4 : #{scoreCard.hole4.par}
-						li Hole 5 : #{scoreCard.hole5.par}
-						li Hole 6 : #{scoreCard.hole6.par}
-						li Hole 7 : #{scoreCard.hole7.par}
-						li Hole 8 : #{scoreCard.hole8.par}
-						li Hole 9 : #{scoreCard.hole9.par}
-						li Hole 10 : #{scoreCard.hole10.par}
-						li Hole 11 : #{scoreCard.hole11.par}
-						li Hole 12 : #{scoreCard.hole12.par}
-						li Hole 13 : #{scoreCard.hole13.par}
-						li Hole 14 : #{scoreCard.hole14.par}
-						li Hole 15 : #{scoreCard.hole15.par}
-						li Hole 16 : #{scoreCard.hole16.par}
-						li Hole 17 : #{scoreCard.hole17.par}
-						li Hole 18 : #{scoreCard.hole18.par}
-				div(class="col-xs-6 col-sm-6 col-md-6")
-					h2 My Score
-					ul
-						li Hole 1 : #{scoreCard.hole1.myscore}
-						li Hole 2 : #{scoreCard.hole2.myscore}
-						li Hole 3 : #{scoreCard.hole3.myscore}
-						li Hole 4 : #{scoreCard.hole4.myscore}
-						li Hole 5 : #{scoreCard.hole5.myscore}
-						li Hole 6 : #{scoreCard.hole6.myscore}
-						li Hole 7 : #{scoreCard.hole7.myscore}
-						li Hole 8 : #{scoreCard.hole8.myscore}
-						li Hole 9 : #{scoreCard.hole9.myscore}
-						li Hole 10 : #{scoreCard.hole10.myscore}
-						li Hole 11 : #{scoreCard.hole11.myscore}
-						li Hole 12 : #{scoreCard.hole12.myscore}
-						li Hole 13 : #{scoreCard.hole13.myscore}
-						li Hole 14 : #{scoreCard.hole14.myscore}
-						li Hole 15 : #{scoreCard.hole15.myscore}
-						li Hole 16 : #{scoreCard.hole16.myscore}
-						li Hole 17 : #{scoreCard.hole17.myscore}
-						li Hole 18 : #{scoreCard.hole18.myscore}
+				div(class="col-xs-3 col-sm-3 col-md-3")
+					h3 Hole
+					ul(class="list-group")
+						- for (var i=1; i<19; i++)
+							li(class="list-group-item") #{i}
+				div(class="col-xs-4 col-sm-4 col-md-4")
+					h3 Course Par
+					ul(class="list-group")
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole1.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole2.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole3.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole4.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole5.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole6.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole7.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole8.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole9.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole10.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole11.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole12.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole13.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole14.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole15.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole16.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole17.par
+						li(class="list-group-item text-center")= scoreCard.scorecard.hole18.par
+
+				div(class="col-xs-5 col-sm-5 col-md-5")
+					h3 My Score
+					ul(class="list-group")
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole1.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole2.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole3.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole4.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole5.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole6.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole7.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole8.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole9.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole10.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole11.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole12.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole13.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole14.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole15.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole16.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole17.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-success btn-xs pull-left") - 
+							input(value="#{scoreCard.scorecard.hole18.myscore}" class="text-center txt-score")
+							a(class="btn btn-success btn-xs pull-right") +
 				
