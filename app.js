@@ -23,6 +23,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.cookieParser());
+app.use(express.bodyParser());
 app.use(express.session({
 	secret: 'keyboard cat'
 }));
@@ -38,21 +39,25 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/home', routes.index);
 app.get('/users', routes.users);
 app.get('/scorecards', routes.scorecards);
 app.get('/scorecards/:id', routes.scorecard);
+app.get('/courses', routes.courses);
+app.get('/courses/:id', routes.course);
+app.get('/addcourse', routes.addcourse);
+app.post('/insertcourse', routes.insertcourse);
 
-app.get('/login', routes.login);
-app.post('/login', passport.authenticate('local', {
-	failureRedirect: '/login',
+app.get('/', routes.login);
+app.post('/', passport.authenticate('local', {
+	failureRedirect: '/',
 	successRedirect: '/scorecards',
 	failureFlash: true
 }));
 
 app.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/login');
+  res.redirect('/');
 });
 
 http.createServer(app).listen(app.get('port'), function(){

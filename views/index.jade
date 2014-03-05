@@ -1,6 +1,14 @@
 extends layout
 
 block content
-  h1 Welcome to Golf Scores
 
-  p Log in to view your scores or register to start keeping score
+	h1(class="text-center") Welcome to MyScorecards
+	<hr />
+	div(class="row")
+		div(class="col-md-6 col-sm-6 col-xs-6")
+			h2(class="text-center") View, Create or amend your course templates
+			a(class="btn btn-primary btn-block" href="/courses") My Courses
+
+		div(class="col-md-6 col-sm-6 col-xs-6")
+			h2(class="text-center") View, Create or amend your scorecards
+			a(class="btn btn-primary btn-block" href="/scorecards") My Scorecards

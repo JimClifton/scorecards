@@ -1,0 +1,89 @@
+extends layout
+
+block content
+	each course, index in courses
+		div(class="panel panel-default")
+			div(class="panel-body")
+				p(class="pull-right")= course.date
+				h1= course.course
+				div(class="col-xs-3 col-sm-3 col-md-3")
+					h3 Hole
+					ul(class="list-group")
+						- for (var i=1; i<19; i++)
+							li(class="list-group-item") #{i}
+				div(class="col-xs-9 col-sm-9 col-md-9")
+					h3 Course Par
+					ul(class="list-group")
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole1.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole2.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole3.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole4.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole5.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole6.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole7.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole8.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole9.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole10.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole11.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole12.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole13.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole14.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole15.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole16.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole17.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-xs pull-left") - 
+							input(value="#{course.scorecard.hole18.par}" class="text-center txt-score")
+							a(class="btn btn-primary btn-xs pull-right") +
+			

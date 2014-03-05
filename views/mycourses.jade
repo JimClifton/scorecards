@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	a(href="/addcourse" class="pull-right btn btn-primary") Add a course +
+	h1= title
+	each course, index in courses
+		div(class="panel panel-default")
+			div(class="panel-body")
+				a(href="/courses/#{course._id}")=course.course

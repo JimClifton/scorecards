@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	h1= title
+	form(method='post' action="/insertcourse")
+		div(class="form-group")
+			input(name='userid', type="hidden", class='form-control', value="#{user}")
+			input(name='date', type="hidden", class='form-control', value="01-01-01")
+			input(name='course', class='form-control', placeholder='Course name')
+		div(class="row")
+			div(class="col-xs-6 col-sm-6 col-md-6")
+				h3 Hole
+				ul(class="list-group")
+					- for (var i=1; i<19; i++)
+						li(class="list-group-item") #{i}
+			div(class="col-xs-6 col-sm-6 col-md-6")
+				h3 Par
+				ul(class="list-group")
+					- for (var i=1; i<19; i++)
+						li(class="list-group-item text-center")
+							a(class="btn btn-primary btn-sm pull-left") - 
+							input(value="0" name="hole#{i}" class="text-center txt-score")
+							a(class="btn btn-primary btn-sm pull-right") +
+		div(class="row")
+			div(class="col-xs-12 col-sm-12 col-md-12")
+				div(class="form-group")
+					input(type='submit', class='btn btn-primary pull-right', value='Add')
